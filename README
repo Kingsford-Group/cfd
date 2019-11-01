@@ -1,1 +1,13 @@
-Document Me!
+Conserved Feature Discovery 
+(software for the manuscript "A statistical method for identifying consistently important features across conditions")
+
+CFD itself is implemented in Go (source code is in the go/src/ directory), and figures for the manuscript were generated in Python, using the produce_manuscript_figures.py code.
+
+conservationdiscovery is an executable that should not require Go installation to run, with the following options:
+Usage of ./conservationdiscovery:
+  -i string
+        list of input files, separated by commas or one input file containing all data as columns
+  -o string
+        filename for outputs
+  -t string
+        type of input - f if file containing list of filenames, s if filestring for glob
