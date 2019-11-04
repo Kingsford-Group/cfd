@@ -7,7 +7,15 @@ conservationdiscovery is an executable that should not require Go installation t
 Usage of ./conservationdiscovery:
   -i string
         list of input files, separated by commas or one input file containing all data as columns
-  -o string
-        filename for outputs
   -t string
         type of input - f if file containing list of filenames, s if filestring for glob
+  -o string
+        filename for outputs
+
+example usages:
+./conservationdiscovery -i=datafiles/gtexsamples_thresh80.txt -t=f -o=outputs/gtex/cfd_gtex_ongenes_thresh80.txt
+./conservationdiscovery -i="HumanBodyMapRNAseq/salmonout/*/genequant.sf" -t=s -o=outputs/humanbodymap/cfd_hbm_ongenes.txt
+
+The SupplementalData directory contains 4 files: one for the housekeeping genes on each of GTEx and the Human Body Map data, and one for the full GO enrichment results on each data set.
+
+The makesimulationdata.py is the script used to generate simulation data from the manuscript.
